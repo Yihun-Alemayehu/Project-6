@@ -1,8 +1,12 @@
 part of 'image_gallery_bloc.dart';
 
-sealed class ImageGalleryEvent extends Equatable {
+abstract class ImageGalleryEvent extends Equatable {
   const ImageGalleryEvent();
 
   @override
   List<Object> get props => [];
 }
+
+class LoadImageGallery extends ImageGalleryEvent {}
+
+
