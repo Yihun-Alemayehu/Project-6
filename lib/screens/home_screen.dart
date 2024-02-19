@@ -27,8 +27,7 @@ class HomeScreen extends StatelessWidget {
       );
     }
     else if(state is ImageLoadedState){
-      return GridView.builder(
-        
+      return GridView.builder(       
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
         ),
@@ -48,7 +47,6 @@ class HomeScreen extends StatelessWidget {
       return Center(
         child: ElevatedButton(
           onPressed: () {
-            // Trigger the fetch images event
             context.read<ImageGalleryBloc>().add(LoadImageGallery());
           },
           child:  Text('Fetch Images${state.toString()}'),
